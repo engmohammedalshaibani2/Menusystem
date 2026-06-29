@@ -1,0 +1,47 @@
+{
+  "name": "bait-al-mandi-menu",
+  "version": "2.0.0",
+  "private": true,
+  "description": "بيت المندي - Offline Restaurant Menu System with Glassmorphism UI",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "db:reset": "prisma db push --force-reset && tsx prisma/seed.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "backup": "tsx scripts/backup.ts",
+    "setup": "npm install && prisma generate && prisma db push && tsx prisma/seed.ts",
+    "health": "tsx scripts/health-check.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "bcryptjs": "^2.4.3",
+    "jose": "^5.9.6",
+    "lucide-react": "^0.487.0",
+    "motion": "^12.23.24",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prisma": "^6.1.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
